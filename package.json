@@ -1,0 +1,32 @@
+{
+  "name": "graphql-gateway-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/ts-node src/index.ts",
+    "dev": "npm run build:live",
+    "build": "./node_modules/.bin/tsc --outDir dist src/**/*.ts",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick Strzelec",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/dotenv": "^4.0.3",
+    "@types/graphql": "^0.13.3",
+    "@types/node": "^10.5.2",
+    "nodemon": "^1.18.4",
+    "prettier": "^1.14.3",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.1"
+  },
+  "dependencies": {
+    "apollo-datasource-rest": "^0.1.5",
+    "apollo-server": "^2.1.0",
+    "dotenv": "^6.0.0",
+    "graphql": "^14.0.2",
+    "npm": "^6.4.1"
+  }
+}
