@@ -10,6 +10,12 @@ export const typeDefs = gql`
   type List {
     id: ID!
     name: String
+    cards: [Card]
+  }
+
+  type Card {
+    id: ID!
+    name: String
   }
 
   type Query {

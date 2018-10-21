@@ -14,4 +14,8 @@ export class TrelloAPI extends RESTDataSource {
   public async lists(boardId: string): Promise<any> {
     return this.get(`/boards/${boardId}/lists/`)
   }
+
+  public async cards(listId: string): Promise<any> {
+    return this.get(`/lists/${listId}/cards/`)
+  }
 }
