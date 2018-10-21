@@ -4,6 +4,7 @@ export const typeDefs = gql`
   type Board {
     id: ID!
     name: String
+    lists: [List]
   }
 
   type List {
