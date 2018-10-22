@@ -18,7 +18,16 @@ export const typeDefs = gql`
     name: String
   }
 
+  input ResourceFilterInput {
+    show: ResourceFilter
+  }
+
+  enum ResourceFilter {
+    OPEN
+    CLOSED
+  }
+
   type Query {
-    boards: [Board]
+    boards(filter: ResourceFilterInput): [Board]
   }
 `
